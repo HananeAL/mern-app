@@ -16,7 +16,8 @@ const crud_create_post = (req, res) => {
 			res.send(crud);
 		})
 		.catch(function (err) {
-			res.status(422).send("Crud add failed");
+			console.log(err);
+			res.status(422).send("Crud add failed",err);
 		});
 };
 
